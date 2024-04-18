@@ -14,7 +14,7 @@ public class Result<T> {
 
     private Result(){}
 
-    public  Result<T> createSuccessResult(String code, String msg, T data) {
+    public static   Result<T> createSuccessResult(String code, String msg, T data) {
         Result<T> result = new Result<>();
         result.setCode(String.valueOf(HttpStatus.SC_OK));
         result.setMsg(msg);

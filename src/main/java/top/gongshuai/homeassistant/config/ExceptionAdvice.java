@@ -8,5 +8,7 @@ import top.gongshuai.homeassistant.dto.common.Result;
 public class ExceptionAdvice {
 
     @ExceptionHandler(Exception.class)
-    public Result<T>
+    public Result<String> handleException(Exception e) {
+        return Result.createSuccessResult("200","2","ss");
+    }
 }
