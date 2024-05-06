@@ -6,23 +6,28 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.io.Serializable;
+import java.time.LocalDate;
 
 @Data
-@TableName("user")
-public class UserDO implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+@TableName("t1")
+public class Query {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @TableField(value = "user_name")
-    private String username;
+    @TableField("cyrybh")
+    private String cyrybh;
 
-    @TableField("password")
-    private String password;
+    @TableField("cyryxm")
+    private String cyryxm;
 
-    @TableField("user_phone")
-    private String userPhone;
+    @TableField("fwzl")
+    private String fwzl;
+
+    @TableField("htbasj")
+    private LocalDate htbasj;
+
+    @TableField("pjsj")
+    private LocalDate pjsj;
+
 }
